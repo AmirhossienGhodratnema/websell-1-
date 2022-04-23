@@ -1,0 +1,31 @@
+<hr> {% if footerdbs %} {% for footerdb in footerdbs %}
+<div class="light-bg py-5" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <p> <span class="ti-location-pin ml-2"></span>{{ footerdb.my_address }}</p>
+                <div class="d-block d-sm-inline-block">
+                    <p class="mb-2">
+                        <a class="ml-4" href="mailto:{{ footerdb.my_mail }}">{{ footerdb.my_mail }}</a><span class="ti-email ml-2"></span>
+                    </p>
+                </div>
+                <div class="d-block d-sm-inline-block">
+                    <p class="mb-2">
+                        <a href="tel:{{ footerdb.my_tell }}">{{ footerdb.my_tell }}</a><span class="ti-headphone-alt ml-2"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="social-icons d-flex justify-content-center justify-content-lg-end my-4 my-lg-0">
+                    <a href="{{ footerdb.my_facebook }}"><span class="ti-facebook"></span></a>
+                    <a href="{{ footerdb.my_twitter }}"><span class="ti-twitter-alt"></span></a>
+                    <a href="{{ footerdb.my_instagram }}"><span class="ti-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}{% endif %}
+<footer class="my-5 text-center">
+    <p class="mb-2"><small>کليه حقوق محصولات و محتوای اين سایت متعلق به انجیر می باشد</small></p>
+</footer>

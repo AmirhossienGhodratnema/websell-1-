@@ -1,0 +1,250 @@
+{% extends 'base.html' %} {% block title %} صفحه اصلی {% endblock %} {% block content %} {% load static %} {% if indexdbs %} {% for indexdb in indexdbs %}
+<header class="bg-gradient" id="home">
+    <div class="container mt-5">
+        <h1>{{ indexdb.base_title }}</h1>
+        <p class="tagline">{{ indexdb.base_subtitle|safe }}</p>
+    </div>
+    <div class="img-hoder  mt-3 w-25 m-auto mt-5">
+        <img src="{{ indexdb.base_pic.url }}" alt="phone" class="img-fluid mt-5 ">
+    </div>
+</header>
+
+{% include '_partials/_alerts.html' %}
+
+<div class="section light-bg" id="features">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h3>ویژگی‌های دوست داشتنی</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card features">
+                    <div class="card-body">
+                        <div class="media">
+                            <span class="ti-face-smile ti-3x gradient-fill ml-3"></span>
+                            <div class="media-body">
+                                <h4 class="card-title">{{ indexdb.vijegi_right_title }}</h4>
+                                <p class="card-text">{{ indexdb.vijegi_right_subtitle|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card features">
+                    <div class="card-body">
+                        <div class="media">
+                            <span class="ti-settings ti-3x gradient-fill ml-3"></span>
+                            <div class="media-body">
+                                <h4 class="card-title">{{ indexdb.vijegi_center_title }}</h4>
+                                <p class="card-text">{{ indexdb.vijegi_center_subtitle|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card features">
+                    <div class="card-body">
+                        <div class="media">
+                            <span class="ti-lock ti-3x gradient-fill ml-3"></span>
+                            <div class="media-body">
+                                <h4 class="card-title">{{ indexdb.vijegi_left_title }}</h4>
+                                <p class="card-text">{{ indexdb.vijegi_left_subtitle|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+                <div class="box-icon">
+                    <span class="ti-mobile gradient-fill ti-3x"></span>
+                </div>
+                <h2>شناخت انواع انجیر ها</h2>
+                <p>{{ indexdb.anva_angir_text|safe }}</p>
+            </div>
+            <div class="perspective-phone d-flex justify-content-end">
+                <img src="{{ indexdb.anva_angir_pic.url }}" class="w-50 " alt="perspective phone" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section light-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h3>روند آماده سازی و ارسال</h3>
+        </div>
+
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#communication">{{ indexdb.ravand_tolid_angir_title_ok_1 }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#schedule">{{ indexdb.ravand_tolid_angir_title_ok_2 }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#messages">{{ indexdb.ravand_tolid_angir_title_ok_3 }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#livechat">{{ indexdb.ravand_tolid_angir_title_ok_4 }}</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="communication">
+                <div class="d-flex flex-column flex-lg-row">
+                    <img src="{{ indexdb.ravand_tolid_angir_pic_1.url }}" class="w-50 ml-4" alt="graphic" class="img-fluid align-self-center ml-lg-5 mb-5 mb-lg-0">
+                    <div>
+                        <h2>{{ indexdb.ravand_tolid_angir_title_1 }}</h2>
+                        <p class="lead">{{ indexdb.ravand_tolid_angir_subtitle_1 }}</p>
+
+                        <p>
+                            {{ indexdb.ravand_tolid_angir_text_1|safe }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="schedule">
+                <div class="d-flex flex-column flex-lg-row">
+                    <div>
+                        <h2>{{ indexdb.ravand_tolid_angir_title_2 }}</h2>
+                        <p class="lead">{{ indexdb.ravand_tolid_angir_subtitle_2 }}</p>
+
+                        <p>
+                            {{ indexdb.ravand_tolid_angir_text_2|safe }}
+                        </p>
+
+                    </div>
+                    <img src="{{ indexdb.ravand_tolid_angir_pic_2.url }}" class="w-50" alt="graphic" class="img-fluid align-self-center mr-lg-5 mb-5 mb-lg-0">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="messages">
+                <div class="d-flex flex-column flex-lg-row">
+                    <img src="{{ indexdb.ravand_tolid_angir_pic_3.url }}" class="w-50" alt="graphic" class="img-fluid align-self-center ml-lg-5 mb-5 mb-lg-0">
+                    <div>
+                        <h2>{{ indexdb.ravand_tolid_angir_title_3 }}</h2>
+                        <p class="lead">{{ indexdb.ravand_tolid_angir_subtitle_3 }}</p>
+
+                        <p>
+                            {{ indexdb.ravand_tolid_angir_text_3|safe }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="livechat">
+                <div class="d-flex flex-column flex-lg-row">
+                    <div>
+                        <h2>{{ indexdb.ravand_tolid_angir_title_4 }}</h2>
+                        <p class="lead">{{ indexdb.ravand_tolid_angir_subtitle_4 }}</p>
+
+                        <p>
+                            {{ indexdb.ravand_tolid_angir_text_4|safe }}
+                        </p>
+
+                    </div>
+                    <img src="{{ indexdb.ravand_tolid_angir_pic_4.url }}" class="w-50" alt="graphic" class="img-fluid align-self-center mr-lg-5 mb-5 mb-lg-0">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="section">
+    <div class="container">
+        <div class="section-title">
+            <h3>آنچه مشتریان ما می گویند</h3>
+        </div>
+
+        <div class="comments owl-carousel">
+            <div class="comment-single">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                <blockquote class="blockquote">{{ indexdb.moshtarian_text_1|safe }}</blockquote>
+                <h5 class="mt-4 mb-2">{{ indexdb.moshtarian_name_1 }}</h5>
+                <p class="text-primary">{{ indexdb.moshtarian_location_1 }}</p>
+            </div>
+            <div class="comment-single">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                <blockquote class="blockquote">{{ indexdb.moshtarian_text_2|safe }}</blockquote>
+                <h5 class="mt-4 mb-2">{{ indexdb.moshtarian_name_2 }}</h5>
+                <p class="text-primary">{{ indexdb.moshtarian_location_2 }}</p>
+            </div>
+            <div class="comment-single">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                <blockquote class="blockquote">{{ indexdb.moshtarian_text_3|safe }}</blockquote>
+                <h5 class="mt-4 mb-2">{{ indexdb.moshtarian_name_3 }}</h5>
+                <p class="text-primary">{{ indexdb.moshtarian_location_3 }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section light-bg" id="gallery">
+    <div class="container">
+        <div class="section-title">
+            <h3>محصولات ما</h3>
+        </div>
+
+        <div class="img-gallery owl-carousel owl-theme">
+            {% if indexdbs %} {% for indexselldb in indexselldbs %}
+            <img src="{{ indexselldb.pic.url }}" alt="pic_name"> {% endfor %}{% endif %}
+        </div>
+    </div>
+</div>
+
+
+<div class="section pt-0 mt-5">
+    <div class="container">
+        <div class="section-title">
+            <h3>سوالات متداول</h3>
+        </div>
+
+        <div class="row pt-4">
+            <div class="col-md-6">
+                <h4 class="mb-3">{{ indexdb.soal_title_1 }}</h4>
+                <p class="light-font mb-5">{{ indexdb.soal_text_1|safe }}</p>
+                <h4 class="mb-3">{{ indexdb.soal_title_2 }}</h4>
+                <p class="light-font mb-5">{{ indexdb.soal_text_2|safe }}</p>
+            </div>
+            <div class="col-md-6">
+                <h4 class="mb-3">{{ indexdb.soal_title_3 }}</h4>
+                <p class="light-font mb-5">{{ indexdb.soal_text_3|safe }}</p>
+                <h4 class="mb-3">{{ indexdb.soal_title_4 }}</h4>
+                <p class="light-font mb-5">{{ indexdb.soal_text_4|safe }}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %} {% endif %} {% endblock %}
